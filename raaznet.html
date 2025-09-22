@@ -28,26 +28,29 @@
         }
     </style>
 </head>
-<body class="bg-[#f0eada] flex items-center justify-center min-h-screen p-4">
-    <div class="popup-container">
-        <main class="w-full max-w-sm bg-[#f5eecb] rounded-lg shadow-xl overflow-hidden">
-            <header>
+<body class="bg-[#f0eada]">
+    <div class="popup-container fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4">
+        <main class="relative w-full max-w-xs bg-[#f5eecb] rounded-xl shadow-xl overflow-hidden">
+            <button aria-label="Close" class="absolute top-2 right-2 z-10 text-gray-800 hover:text-black bg-white/50 hover:bg-white/80 rounded-full w-8 h-8 flex items-center justify-center text-2xl leading-none transition-colors">
+                &times;
+            </button>
+            <header class="bg-black">
                 <h1 class="sr-only">پوستر اطلاع‌رسانی در مورد سامانه سماوا</h1>
                 <img src="https://raw.githubusercontent.com/joinnasnet/popup/refs/heads/main/images/samava-small.png" alt="تصویر مفهومی نظارت دولتی با دوربین مداربسته و کارت شناسایی" class="w-full object-cover">
             </header>
-            <div class="p-6 pt-4 text-center space-y-3">
-                <p class="text-2xl font-bold text-gray-900 leading-normal">
+            <div class="p-5 pt-3 text-center space-y-2">
+                <p class="text-xl font-bold text-gray-900 leading-tight">
                     ابزارهای حکومت برای<br>جاسوسی از هویت شهروندان
                 </p>
-                <h2 class="text-6xl font-black text-red-600 samava-title">
+                <h2 class="text-5xl font-black text-red-600 samava-title">
                     سامانه سماوا
                 </h2>
-                <p class="text-lg text-gray-800">
+                <p class="text-base text-gray-800">
                     سامانه ملی احراز هویت و استعلامات
                 </p>
                 <div class="pt-2">
-                    <a href="https://www.instagram.com/p/DOySR01jE-8/?img_index=1" class="inline-block bg-[#f9c851] hover:bg-yellow-500 text-black font-bold text-base py-3 px-10 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                         بیشتر بخوانید
+                    <a href="#" class="inline-block bg-[#f9c851] hover:bg-yellow-500 text-black font-bold text-sm py-2 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+                      بیشتر بخوانید
                     </a>
                 </div>
             </div>
