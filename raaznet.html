@@ -1,60 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8WDRBFM0H"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پاپ‌آپ سماوا</title>
 
-      gtag('config', 'G-F8WDRBFM0H');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سامانه سماوا - ابزار جاسوسی حکومت</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .samava-title {
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        }
-    </style>
+<!-- Vazirmatn from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --card:#141a23;
+    --text:#eaf1ff;
+    --muted:#c7d1e0;
+    --accent:#e1382e;
+    --btn:#f2c24b;
+    --divider:#2a3240;
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:#000;
+    color:var(--text);
+    font-family:'Vazirmatn', system-ui, sans-serif;
+  }
+  .overlay{
+    min-height:100dvh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1.25rem;
+  }
+  .card{
+    width:min(44rem,96vw);
+    border-radius:1.5rem;
+    background:var(--card);
+    box-shadow:0 1.25rem 3.5rem rgba(0,0,0,.55);
+    overflow:hidden;
+  }
+  .hero-link{display:block}
+  .hero{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    background:#000;
+  }
+  .content{padding:2rem 1.5rem 1.25rem}
+  .kicker{
+    font-size:1.25rem;
+    font-weight:700;
+    text-align:center;
+    line-height:1.8;
+  }
+  .title{
+    margin:.75rem 0 .5rem;
+    font-size:3.2rem;
+    text-align:center;
+    color:var(--accent);
+    font-weight:900;
+    text-shadow:0 .15rem 0 rgba(0,0,0,.35);
+  }
+  .sub{
+    text-align:center;
+    color:var(--muted);
+    font-size:1.1rem;
+    margin:0 0 1.25rem;
+  }
+  .cta-wrap{display:flex;justify-content:center;padding:.25rem 0 1.25rem}
+  .cta{
+    display:inline-block;
+    min-width:12rem;
+    padding:.95rem 1.25rem;
+    border-radius:2rem;
+    font-weight:900;
+    text-decoration:none;
+    color:#1b1b1b;
+    background:var(--btn);
+    border:1px solid rgba(0,0,0,.1);
+    box-shadow:0 .75rem 1.5rem rgba(0,0,0,.25);
+    text-align:center;
+  }
+  .divider{height:1px;background:var(--divider);margin:0 1.5rem 1rem}
+  .social{display:flex;gap:1.25rem;justify-content:center;padding:0 0 1.5rem}
+  .icon{width:2.5rem;height:2.5rem;display:inline-flex;align-items:center;justify-content:center;color:#c8d3e5;text-decoration:none}
+  .icon svg{width:1.85rem;height:1.85rem;fill:#c8d3e5}
+  @media (max-width:420px){
+    .title{font-size:2.4rem}
+    .kicker{font-size:1.1rem}
+  }
+</style>
 </head>
-<body class="bg-[#f0eada]">
-    <div class="popup-container fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4">
-        <main class="relative w-full max-w-xs bg-[#f5eecb] rounded-xl shadow-xl overflow-hidden">
-            <button aria-label="Close" class="absolute top-2 right-2 z-10 text-gray-800 hover:text-black bg-white/50 hover:bg-white/80 rounded-full w-8 h-8 flex items-center justify-center text-2xl leading-none transition-colors">
-                &times;
-            </button>
-            <header class="bg-black">
-                <h1 class="sr-only">پوستر اطلاع‌رسانی در مورد سامانه سماوا</h1>
-                <img src="https://raw.githubusercontent.com/joinnasnet/popup/refs/heads/main/images/samava-small.png" alt="تصویر مفهومی نظارت دولتی با دوربین مداربسته و کارت شناسایی" class="w-full object-cover">
-            </header>
-            <div class="p-5 pt-3 text-center space-y-2">
-                <p class="text-xl font-bold text-gray-900 leading-tight">
-                    ابزارهای حکومت برای<br>جاسوسی از هویت شهروندان
-                </p>
-                <h2 class="text-5xl font-black text-red-600 samava-title">
-                    سامانه سماوا
-                </h2>
-                <p class="text-base text-gray-800">
-                    سامانه ملی احراز هویت و استعلامات
-                </p>
-                <div class="pt-2">
-                    <a href="https://www.instagram.com/p/DOySR01jE-8/?img_index=1" class="inline-block bg-[#f9c851] hover:bg-yellow-500 text-black font-bold text-sm py-2 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-                      اینجا بیشتر بخوانید
-                    </a>
-                </div>
-            </div>
-        </main>
+<body>
+<div class="overlay">
+  <section class="card" role="dialog" aria-labelledby="t" aria-modal="true">
+    <a class="hero-link" href="https://www.instagram.com/p/DOySR01jE-8/?img_index=1" target="_blank" rel="noopener">
+      <img class="hero" src="https://raw.githubusercontent.com/joinnasnet/popup/refs/heads/main/images/samava-small.png" alt="پوستر آگاهی درباره نظارت هویتی" />
+    </a>
+
+    <div class="content">
+      <p class="kicker">ابزارهای حکومت برای جاسوسی از<br>هویت شهروندان</p>
+      <h1 id="t" class="title">سامانه&nbsp;سماوا</h1>
+      <p class="sub">سامانه ملی احراز هویت و استعلامات</p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://www.instagram.com/p/DOySR01jE-8/?img_index=1" target="_blank" rel="noopener">بیشتر بخوانید</a>
+      </div>
+      <div class="divider" aria-hidden="true"></div>
+      <nav class="social" aria-label="شبکه‌های اجتماعی">
+        <a class="icon" href="https://t.me/joinNASNETGroup" target="_blank" rel="noopener" aria-label="تلگرام">
+          <svg viewBox="0 0 24 24"><path d="M9.04 15.54 8.9 19.1c.5 0 .72-.22.98-.48l2.36-2.27 4.89 3.57c.9.5 1.55.24 1.79-.83l3.24-15.2h.01c.29-1.35-.49-1.88-1.36-1.55L1.4 9.32C.09 9.83.11 10.58 1.17 10.92l5.46 1.7 12.7-7.99c.6-.38 1.15-.18.7.2"/></svg>
+        </a>
+        <a class="icon" href="https://www.instagram.com/joinnasnet/" target="_blank" rel="noopener" aria-label="اینستاگرام">
+          <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a6 6 0 1 1 0 12.001 6 6 0 0 1 0-12ZM12 9a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 9Zm5.75-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        </a>
+        <a class="icon" href="https://x.com/joinNASNET" target="_blank" rel="noopener" aria-label="ایکس">
+          <svg viewBox="0 0 24 24"><path d="M3 3h4.4l5.17 6.87L17.9 3H21l-7.8 9.9L21.3 21H16.9l-5.6-7.43L6.1 21H3l7.93-10.07L3 3z"/></svg>
+        </a>
+      </nav>
     </div>
+  </section>
+</div>
 </body>
 </html>
