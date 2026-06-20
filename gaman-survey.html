@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>نظرسنجی نگرش ایرانیان</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f3ebd7;
+            color: #1a1a1a;
+            direction: rtl;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .popup-container {
+            background-color: #f3ebd7;
+            border-radius: 18px;
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+            width: 100%;
+            max-width: 380px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .poster {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            margin-top: 14px;
+            border-radius: 10px;
+            border: none;
+            background-color: #d92b1f;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .button:hover {
+            background-color: #b61f15;
+        }
+
+        .button:active {
+            transform: scale(0.99);
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <img
+            class="poster"
+            src="images/gaman-survey-poster.jpg"
+            srcset="images/gaman-survey-poster.jpg 900w, images/gaman-survey-poster-2x.jpg 1400w"
+            sizes="(max-width: 380px) 100vw, 380px"
+            alt="نظرسنجی: نگرش ایرانیان درباره اعتراضات دی ماه و جنگ — این نظرسنجی کوتاه توسط موسسه گمان، به طور امن و ناشناس برگزار می‌شود.">
+
+        <!-- لینک نظرسنجی را اینجا قرار دهید -->
+        <a href="SURVEY_LINK_HERE" class="button">شروع نظرسنجی</a>
+    </div>
+</body>
+</html>
